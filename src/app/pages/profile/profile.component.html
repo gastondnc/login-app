@@ -1,0 +1,41 @@
+<!-- Title Section User Profile -->
+<ng-container *ngIf="literals !== undefined">
+  <div class="flex justify-center my-3 p-4">
+    <h2 class="text-blue-200 text-4xl">{{ literals?.title }}</h2>
+  </div>
+</ng-container>
+<!-- End Section User Profile -->
+
+<!-- Buttons Containter -->
+<div class="flex gap-2 justify-center">
+  <div>
+    <button
+      class="py-2 px-4 text-sm bg-blue-200 text-blue-950 font-semibold rounded-lg shadow-md hover:bg-blue-500 focus:outline-none focus:ring-2 focus:bg-blue-400 focus:ring-opacity-75"
+      (click)="changeForm('personal')"
+    >
+      Personal
+    </button>
+  </div>
+
+  <div>
+    <button
+    class="py-2 px-4 text-sm bg-blue-200 text-blue-950 font-semibold rounded-lg shadow-md hover:bg-blue-500 focus:outline-none focus:ring-2 focus:bg-blue-400 focus:ring-opacity-75"
+      (click)="changeForm('address')"
+    >
+      Address
+    </button>
+  </div>
+</div>
+<!-- Endf Buttons Containers -->
+
+<!-- Component Personal -->
+<ng-container *ngIf="selectedForm === 'personal'">
+  <form-personal></form-personal>
+</ng-container>
+<!-- End Component Personal -->
+
+<!-- Component Address -->
+<ng-container *ngIf="selectedForm === 'address'">
+  <form-address></form-address>
+</ng-container>
+<!-- End Components Address -->

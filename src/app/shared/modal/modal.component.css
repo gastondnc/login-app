@@ -1,0 +1,33 @@
+.modal-container{
+  position:fixed;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.modal-error {
+  background-color: red;
+  color: white;
+  max-width: 70%;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.modal-success {
+  background-color: green;
+  color: white;
+  max-width: 70%;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+
+.btn-error {
+  padding: 10px;
+  border: 1px solid white;
+}
+
+

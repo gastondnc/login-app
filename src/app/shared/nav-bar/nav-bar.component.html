@@ -1,0 +1,17 @@
+<div class="flex justify-between max-w-full bg-blue-950 p-3">
+  <nav>
+    <ul class="flex gap-3 text-blue-200">
+      <li><a routerLink="profile">Profile</a></li>
+      <li><a routerLink="contact">Contact</a></li>
+    </ul>
+  </nav>
+  <div>
+    <button
+      (click)="logout()"
+      class="py-2 px-4 text-xs bg-blue-200 text-blue-950 font-semibold rounded-lg shadow-md hover:bg-blue-500 focus:outline-none focus:ring-2 focus:bg-blue-400 focus:ring-opacity-75"
+    >
+      {{ btnTitle }}
+    </button>
+  </div>
+</div>
+

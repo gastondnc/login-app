@@ -1,0 +1,95 @@
+<div class=" px-6 py-4 mt-4">
+  <div class="mx-auto max-w-2xl text-center">
+    <h2  class="text-3xl font-bold tracking-tight text-blue-200 sm:text-4xl">
+      {{literals.title}}
+    </h2>
+
+    <div class="flex -space-x-2 justify-center mt-3 p-2 overflow-hidden">
+      <img class="inline-block h-20 w-20 rounded-full ring-2 ring-white" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
+    </div>
+  </div>
+  <form (ngSubmit)="onSubmit()" class="mx-auto mt-16 max-w-xl sm:mt-10">
+    <div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
+      <div>
+        <label
+       class="block text-sm font-semibold leading-6 text-blue-200"
+          >{{literals.form.labelFirstName}}</label
+        >
+        <div class="mt-2.5">
+          <input
+            [(ngModel)]="user.name!.firstname"
+            type="text"
+            name="first-name"
+            id="first-name"
+            [placeholder]="literals.form.placeholderFirstName"
+            class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+          />
+        </div>
+      </div>
+      <div>
+        <label
+          class="block text-sm font-semibold leading-6 text-blue-200"
+          >{{literals.form.labelLastName}}</label
+        >
+        <div class="mt-2.5">
+          <input
+            [(ngModel)]="user.name!.lastname"
+            type="text"
+            name="last-name"
+            id="last-name"
+            [placeholder]="literals.form.placeholderLastName"
+            class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+          />
+        </div>
+      </div>
+      <div>
+        <label
+          class="block text-sm font-semibold leading-6 text-blue-200"
+        >
+        {{literals.form.labelEmail}}
+        </label>
+        <div class="mt-2.5">
+          <input
+            [(ngModel)]="user.email"
+            type="email"
+            name="emial"
+            id="emial"
+            [placeholder]="literals.form.placeholderEmail"
+            class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+          />
+        </div>
+      </div>
+      <div>
+        <label
+          class="block text-sm font-semibold leading-6 text-blue-200"
+        >
+        {{literals.form.labelPhone}}
+        </label>
+        <div class="mt-2.5">
+          <input
+            [(ngModel)]="user.phone"
+            type="text"
+            name="phone"
+            id="phone"
+            [placeholder]="literals.form.placeholderPhone"
+            class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+          />
+        </div>
+      </div>
+
+
+    </div>
+    <div class="mt-10">
+      <button
+        type="submit"
+        class="block w-full rounded-md bg-blue-400 px-3.5 py-2.5 text-center text-sm font-semibold text-blue-950 shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+      >
+      {{literals.form.btnSubmitLabel}}
+      </button>
+    </div>
+  </form>
+</div>
+
+
+  <modal #modal></modal>
+
